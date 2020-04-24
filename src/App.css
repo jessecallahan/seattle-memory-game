@@ -1,4 +1,13 @@
+body {
+  background-image: url("./assets/images/hero-explore-pike-place-market-restaurants-market-entrance.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .App {
-  text-align: center;
-  padding: 50px;
+  padding-left: 80px;
+}
+
+.header {
+padding-left: 100px;
 }

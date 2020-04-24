@@ -1,21 +1,25 @@
-import React, {useState} from 'react'
+import React from 'react'
+import './App.css'
+import Header from './Header'
 import Board from './components/Board/Board'
-import backImg from './assets/images/back.png'
-import angular from './assets/images/angular.png'
-import css from './assets/images/css.png'
-import go from './assets/images/go.png'
-import html from './assets/images/html.png'
-import rail from './assets/images/rail.png'
-import react from './assets/images/react.png'
-import scala from './assets/images/scala.png'
-import vue from './assets/images/vue.png'
+import backImg from './assets/images/back.jpg'
+import cloudy from './assets/images/cloudyday.jpg'
+import ferriswheel from './assets/images/ferriswheel.jpg'
+import elephant from './assets/images/elephant.jpg'
+import jimi from './assets/images/jimi.jpg'
+import pikeplace from './assets/images/pikeplace.jpg'
+import rainer from './assets/images/rainer.jpg'
+import safeco from './assets/images/safeco.jpg'
+import seattleferry from './assets/images/seattleferry.jpg'
 
 function App() {
   const cards = buildCards()
   return (
     <div className="App">
+      <Header />
       <Board cards={cards} />
     </div>
+
   )
 }
 
@@ -23,7 +27,7 @@ export default App
 
 function buildCards() {
   let id = 0
-  const images = {angular, css, go, html, rail, react, scala, vue}
+  const images = { cloudy, ferriswheel, elephant, jimi, pikeplace, rainer, safeco, seattleferry }
   const cards = Object.keys(images).reduce((result, item) => {
     const getCard = () => ({
       id: id++,
@@ -41,8 +45,8 @@ function suffle(arr) {
   let len = arr.length
   for (let i = 0; i < len; i++) {
     let randomIdx = Math.floor(Math.random() * len)
-    let copyCurrent = {...arr[i]}
-    let copyRandom = {...arr[randomIdx]}
+    let copyCurrent = { ...arr[i] }
+    let copyRandom = { ...arr[randomIdx] }
     arr[i] = copyRandom
     arr[randomIdx] = copyCurrent
   }

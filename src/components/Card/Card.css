@@ -7,6 +7,12 @@
 }
 
 .Card img{
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  padding:1px;
+  border: 8px solid  pink;
+}
+
+.Card .cover {
+  object-fit: cover;
 }
